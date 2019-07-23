@@ -41,6 +41,6 @@ function setCookies(){
         if (e){
             value = 1;
         }
-        Cookies.set(element, value/*, { expires: target }*/);
+        Cookies.set(element, value, { expires: target });
     });
 }
