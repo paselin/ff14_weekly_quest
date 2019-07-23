@@ -1,6 +1,8 @@
 div.checkboxs  {
+    width: 20%;
+    min-width: 200px;
     margin : 30px ;
     padding : 20px ;
     border : 1px solid red ;
-    background-color : green ;
+    background-color : lightgreen ;
 } 
