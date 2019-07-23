@@ -26,7 +26,7 @@ function loadCookies(){
     target.setSeconds(0);
     target.setMilliseconds(0);
     let e = document.getElementsByName("nextUpdate")[0];
-    e.textContent = dateFormat(target);
+    e.textContent = "次回更新は" + dateFormat(target) + "です。";
 }
 
 // Cookieのセット時はexpiredを日付指定したいため、各情報として上書きする
