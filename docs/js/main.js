@@ -1,14 +1,16 @@
-// 起動時にCookieを取得する
-// その取得したCookieの状態によってcheckedを切り替える
-datas = ["loyalcustomers","doma","eden1","eden2","eden3","eden4","kuro"];
-cookies = Cookies.get();
-datas.forEach(element => {
-    let cookie = Cookies.get(element);
-    if (cookie != undefined && cookie == 1) {
-        var e = document.getElementsByName(element)[0];
-        e.checked = true;
-    }
-});
+function loadCookies(){
+    // 起動時にCookieを取得する
+    // その取得したCookieの状態によってcheckedを切り替える
+    datas = ["loyalcustomers","doma","eden1","eden2","eden3","eden4","kuro"];
+    cookies = Cookies.get();
+    datas.forEach(element => {
+        let cookie = Cookies.get(element);
+        if (cookie != undefined && cookie == 1) {
+            var e = document.getElementsByName(element)[0];
+            e.checked = true;
+        }
+    });
+}
 
 // Cookieのセット時はexpiredを日付指定したいため、各情報として上書きする
 // でもCookieってドメインごとに一括で持つんじゃなかったっけ
