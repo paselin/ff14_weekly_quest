@@ -8,9 +8,14 @@ function loadCookies(){
     cookies = Cookies.get();
     datas.forEach(element => {
         let cookie = Cookies.get(element);
-        if (cookie != undefined && cookie == 1) {
-            let e = document.getElementsByName(element)[0];
-            e.checked = true;
+        if (cookie == undefined){continue;}
+        let form = document.getElementsByName(element)[0]
+        if (form.type == "text"){
+            form.value = validate(cookie,0,HIGHEST_TOKEN_LIMIT)
+        } else if (form.type == "checkbox"){
+            if (cookie == 1) {
+                form.checked = true;
+            }    
         }
     });
 
