@@ -8,7 +8,7 @@ function loadCookies(){
     cookies = Cookies.get();
     datas.forEach(element => {
         let cookie = Cookies.get(element);
-        if (cookie == undefined){continue;}
+        if (cookie == undefined){return;}
         let form = document.getElementsByName(element)[0]
         if (form.type == "text"){
             form.value = validate(cookie,0,HIGHEST_TOKEN_LIMIT)
