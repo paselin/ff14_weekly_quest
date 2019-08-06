@@ -53,7 +53,7 @@ function calcNextResetDay(date){
     if (nextResetDayDiff == 0){
         // 今日が火曜日の場合、今の時間を確認する
         // 17:00前ならdiffを0に、17:00を超えていればdiffはそのまま
-        if (target.getHours() < 17){
+        if (retDate.getHours() < 17){
             nextTuesDayDiff = 0;
         }
     }
